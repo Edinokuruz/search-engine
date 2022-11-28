@@ -8,7 +8,6 @@
 #include "SearchServer.h"
 #include "InvertedIndex.h"
 #include "ConverterJSON.h"
-#include "gtest/gtest.h"
 
 //------------------------------------------------------------------------------
 nlohmann::json get_data_from_file(std::ifstream &file)

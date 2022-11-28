@@ -1,8 +1,19 @@
-## __Название проекта:__ 
-Локальный поисковый движок по файлам.
+![GitHub author](https://img.shields.io/badge/made_by-Grigory_Brusnik-purple)
+![GitHub repo size](https://img.shields.io/github/repo-size/Edinokuruz/search-engine?color=purple)
+![GitHub author](https://img.shields.io/badge/made_on-C++-purple)
+![GitHub repo directory count](https://img.shields.io/github/directory-file-count/Edinokuruz/search-engine?color=purple)
+## __Название проекта | Project name__ 
+![GitHub author](https://img.shields.io/badge/-RUS-red)  
+Локальный поисковый движок по файлам.  
+![GitHub author](https://img.shields.io/badge/-ENG-red)  
+Local search engine for files.
+
 ___
-## __Применение проекта:__ 
-На основе запроса(ов) пользователя, приложение последовательно осуществляет поиск среди набора документов наиболее соответствующего данному запросу(ам), а также их сортировку в зависимости от степени релевантности.
+## __Применение проекта | Project usage__
+![GitHub author](https://img.shields.io/badge/-RUS-blue)    
+На основе запроса(ов) пользователя, приложение последовательно осуществляет поиск среди набора документов наиболее соответствующего данному запросу(ам), а также их сортировку в зависимости от степени релевантности.  
+![GitHub author](https://img.shields.io/badge/-ENG-blue)  
+Based on the user's request, the program sequentially searches among the set of documents that best matches the given request, as well as sorting them depending on the degree of relevance.  
 ___
 ## __Описание работы проекта:__ 
 Запуск приложения осуществляется при помощи файла config.json. Файл содержит не только данные для запуска консольного приложения, но также и пути к документам, среди которых будет осуществляться поиск. Если файл запуска отсутствует или содержит некорректные данные, то программа завершит работу выдав ошибку. Документы должны иметь разрешение .txt. Перечень запросов, по которым будет осуществляться поиск в документах, должен быть указан в файле requests.json. Результат работы приложения записывается в файл answers.json. Где, в случае если не найдено ни одного документа по запросу, выводится сообщение false, а если найден хотя бы один документ - true. Если в результате поиска найдено несколько подходящих документов, то ответ будет записан в зависимости от степени релевантности (от большего к меньшему).   

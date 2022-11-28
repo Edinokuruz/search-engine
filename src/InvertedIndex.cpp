@@ -6,7 +6,6 @@ void InvertedIndex::UpdateDocumentBase(std::vector<std::string> &inputDocs)
     docs = inputDocs;
     for(int i = 0; i < docs.size(); ++i)
     {
-        //documentThreadPool.emplace_back(std::thread(&InvertedIndex::WorkWithDocument, this, i));
         documentThreadPool.emplace_back(&InvertedIndex::WorkWithDocument, this, i);
     }
     std::for_each(documentThreadPool.begin(),documentThreadPool.end(), std::mem_fn(&std::thread::join));
@@ -33,9 +32,7 @@ void InvertedIndex::WorkWithDocument(int i)
                 {
                     if(it->docId == i)
                     {
-                        //freqDictionary_access.lock();
                         it->count++;
-                        //freqDictionary_access.unlock();
                         findDocId = true;
                         break;
                     }
@@ -46,9 +43,7 @@ void InvertedIndex::WorkWithDocument(int i)
                     Entry entry;
                     entry.docId = i;
                     entry.count = 1;
-                    //freqDictionary_access.lock();
                     freqDictionary[wordFromSequence].push_back(entry);
-                    //freqDictionary_access.unlock();
                 }
                 freqDictionary_access.unlock();
             }
